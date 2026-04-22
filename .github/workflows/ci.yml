@@ -24,7 +24,7 @@ jobs:
       - name: Build image
         run: docker build -t ${{ env.IMAGE_NAME }}:${{ github.sha }} ./app
 
-      # scan the freshly built image with Trivy. Fail the job on CRITICAL.
+      # scan the freshly built image with Trivy.Fail the job on CRITICAL.
       - name: Scan image with Trivy
         uses: aquasecurity/trivy-action@0.35.0
         with:
